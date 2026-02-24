@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teja Technologies | DevOps Training</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        /* HERO */
+        .hero {
+            height: 90vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("{% static 'images/devops-hero.jpg' %}") center/cover no-repeat;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-top: 15px;
+        }
+
+        .hero .btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+        }
+
+        /* ABOUT */
+        .about-title {
+            font-weight: 700;
+            font-size: 2.4rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* COURSE CARDS */
+        .course-card {
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">Teja Technologies</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/devops/">DevOps</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container text-center">
+        <h1>DevOps & Cloud Engineering Training</h1>
+        <p>
+            AWS • Azure • Linux • Git • Docker • CI/CD • Kubernetes
+        </p>
+        <a href="/devops/" class="btn btn-primary btn-lg">
+            Enroll for DevOps
+        </a>
+    </div>
+</section>
+
+<!-- ABOUT DEVOPS -->
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2 class="about-title">Building DevOps Careers</h2>
+            <p class="about-text mt-3">
+                Learn real-world DevOps practices used by top companies.
+                We focus on hands-on cloud deployment, automation,
+                CI/CD pipelines, and production-ready systems.
+            </p>
+            <p class="about-text">
+                Our training is designed for **freshers, developers,
+                and working professionals** who want to move into
+                high-paying DevOps roles.
+            </p>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/devops-hero.jpg' %}"
+                 class="img-fluid rounded shadow">
+        </div>
+    </div>
+</section>
+
+<!-- DEVOPS MODULES -->
+<section class="container my-5">
+    <h2 class="text-center fw-bold mb-4">DevOps Course Modules</h2>
+
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card course-card p-4 text-center">
+                <h5>Linux & Git</h5>
+                <p>Server basics, version control</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card course-card p-4 text-center">
+                <h5>Docker & CI/CD</h5>
+                <p>Automation & pipelines</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card course-card p-4 text-center">
+                <h5>AWS Cloud</h5>
+                <p>EC2, S3, IAM, RDS</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card course-card p-4 text-center">
+                <h5>Kubernetes</h5>
+                <p>Container orchestration</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+    © 2026 Teja Technologies | DevOps Training
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

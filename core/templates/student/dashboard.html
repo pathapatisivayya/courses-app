@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-success">
+    <div class="container">
+        <span class="navbar-brand">Student Dashboard</span>
+        <a href="/logout/" class="btn btn-light btn-sm">Logout</a>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h3>Course Overview</h3>
+
+    <div class="card shadow p-3 mt-3">
+        <h5>Course Name</h5>
+        <p>{{ enrollment.course_name }}</p>
+
+        <h5>Trainer</h5>
+        <p>{{ enrollment.trainer.username }}</p>
+    </div>
+
+    <h4 class="mt-4">Assignments</h4>
+    <ul class="list-group mt-2">
+        {% for assignment in assignments %}
+            <li class="list-group-item">
+                <strong>{{ assignment.title }}</strong><br>
+                {{ assignment.description }}
+            </li>
+        {% empty %}
+            <li class="list-group-item text-center">No assignments yet</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
