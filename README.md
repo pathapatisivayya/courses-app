@@ -9,7 +9,7 @@ cd core
 python -m venv venv
 # Windows: venv\Scripts\activate
 # Linux/Mac: source venv/bin/activate
-pip install django
+pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
