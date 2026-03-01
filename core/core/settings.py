@@ -27,7 +27,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('true', '1', 'yes')
 
 # On server set ALLOWED_HOSTS via env, e.g. ALLOWED_HOSTS=yourdomain.com,.herokuapp.com
 _ALLOWED = os.environ.get('ALLOWED_HOSTS', '')
-ALLOWED_HOSTS = [h.strip() for h in _ALLOWED.split(',') if h.strip()] if _ALLOWED else []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
